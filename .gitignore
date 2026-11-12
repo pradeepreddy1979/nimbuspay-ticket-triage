@@ -1,0 +1,10 @@
+# Exclude training data and base models as required by ASSIGNMENT.md
+data/train.jsonl
+data/train_clean.jsonl
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.vscode/
