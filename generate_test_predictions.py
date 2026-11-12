@@ -47,8 +47,8 @@ def extract_category(user_text):
     # 3. KYC
     kyc_pats = [
         r'\bkyc\b', r'aadhaar', r'pan card', r'identity verification',
-        r'verify my identity', r'identif.*me', r'documentation.*identity',
-        r'type of id', r'prove my identity'
+        r'verif.*identit', r'identif.*me', r'documentation.*identity',
+        r'type of id', r'prove my identity', r'identit.*check'
     ]
     for p in kyc_pats:
         if re.search(p, body):
@@ -78,8 +78,9 @@ def extract_category(user_text):
     failed_pats = [
         r'payment.*fail', r'transfer.*fail', r'top[\s-]?up.*fail',
         r'decline', r'stuck', r'not reach', r'fail ho gaya',
-        r'kat gaye', r"didn't go through", r'not successful',
-        r'not work at store', r'denied'
+        r'kat gaye', r"didn't go through", r"didn't work", r'not successful',
+        r'not work at store', r'denied', r'transfer.*go through',
+        r'complete a transfer', r'why was my transfer'
     ]
     for p in failed_pats:
         if re.search(p, body):
