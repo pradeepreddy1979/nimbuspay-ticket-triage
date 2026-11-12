@@ -8,3 +8,6 @@ __pycache__/
 *$py.class
 .ipynb_checkpoints/
 .vscode/
+
+# Internal candidate notes & interview preparation (kept locally, excluded from public repo)
+interview_prep/
